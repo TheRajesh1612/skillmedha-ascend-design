@@ -32,7 +32,7 @@ const CourseCard = ({ title, category, level, duration, rating, students }: Cour
             <span className="font-medium text-card-foreground">{rating}</span>
             <span className="text-muted-foreground">({students.toLocaleString()})</span>
           </div>
-          <Link to="#" className="text-sm font-semibold text-primary hover:underline">Enroll →</Link>
+          <Link to={`/courses/${encodeURIComponent(title.toLowerCase().replace(/\s+/g, "-"))}`} className="text-sm font-semibold text-primary hover:underline">Enroll →</Link>
         </div>
       </div>
     </div>

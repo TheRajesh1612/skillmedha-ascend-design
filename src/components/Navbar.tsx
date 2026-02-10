@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, GraduationCap } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import ThemeToggle from "./ThemeToggle";
 
 const navLinks = [
   { name: "Courses", path: "/courses" },
@@ -46,6 +47,7 @@ const Navbar = () => {
         </div>
 
         <div className="hidden md:flex items-center gap-3">
+          <ThemeToggle />
           <Link to="/login" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
             Log in
           </Link>
